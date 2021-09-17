@@ -16,9 +16,7 @@ public class Main {
 		Game game3 = new Game("World Flipper", "Cygames", GACHA);
 		
 		List<Game> listaGames = Arrays.asList(game1,game2,game3);
-		String collect = listaGames.stream()
-		.map(e-> String.valueOf(e.getNome()))
-		.collect(Collectors.joining("  "));
-		System.out.println(collect);
+		listaGames.stream()
+		.forEach(e -> System.out.println(e.getNome()));
 	}
 }
